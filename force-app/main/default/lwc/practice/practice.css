@@ -1,0 +1,13 @@
+.imgfix{
+    display: flex;
+    padding: auto;
+    width: auto;
+    margin: 20px;
+    border: 2px solid gray;
+    overflow-y: auto;
+}
+.inputText{
+    width: auto;
+    padding: 10px;
+    margin: 12px;
+}

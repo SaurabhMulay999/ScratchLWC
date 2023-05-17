@@ -1,0 +1,32 @@
+<template>
+
+
+    <lightning-card title="Search" icon-name="custom:custom11">
+        <input label="Search" class="inputText" onchange={searchHandler}></input>
+        <c-child-practice onrestaurantclick={Rhandler}></c-child-practice>
+    </lightning-card>
+    <template  if:true={isTrue}>
+        <lightning-card title="Restaurants" icon-name="custom:custom12">
+            
+            <ul class="slds-m-around_medium">
+                <template for:each={Rdata.restaurants} for:item="Rd">
+                    <div key={Rd.id} onclick={ButtonHandler}>
+                    <li>
+                    <div class="imgfix">
+                    <lightning-card title={Rd.name} icon-name="custom:custom14">
+                        <div>    
+                            <image src={Rd.image} size="medium"></image>
+                            <h4><strong>{Rd.description}</strong></h4>
+                            <button key={Rd.id} class="btn slds-button slds-button_outline-brand" label="Select">Select</button>
+                        </div>
+                    </lightning-card>
+                    </div>
+                
+                    </li>
+                </div>
+                
+                </template>
+            </ul>
+        </lightning-card>
+    </template>
+</template>
